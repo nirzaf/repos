@@ -1,0 +1,351 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BECA69C1-BB34-48B8-AAE5-139925CE8DC7}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PCJ_System</RootNamespace>
+    <AssemblyName>PCJ_System</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bunifu_UI_v1.5.3, Version=1.5.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Bunifu_UI_v1.5.3.dll</HintPath>
+    </Reference>
+    <Reference Include="GitHub, Version=1.13.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\GitHub.1.13.2\lib\netstandard2.0\GitHub.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="UI Design\Foriegn_Currency_Update.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI Design\Foriegn_Currency_Update.Designer.cs">
+      <DependentUpon>Foriegn_Currency_Update.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PCJ_DBDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PCJ_DBDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="UI Design\Admin_Menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI Design\Admin_Menu.Designer.cs">
+      <DependentUpon>Admin_Menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DashBoard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DashBoard.Designer.cs">
+      <DependentUpon>DashBoard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DB_CONNECTION.cs" />
+    <Compile Include="GlobalVariablesClass.cs" />
+    <Compile Include="GrideViewTransaction\Invoice_Certificate.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GrideViewTransaction\Invoice_Certificate.Designer.cs">
+      <DependentUpon>Invoice_Certificate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI Design\In_certi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI Design\In_certi.Designer.cs">
+      <DependentUpon>In_certi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GrideViewAdmin\NewUser.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GrideViewAdmin\NewUser.Designer.cs">
+      <DependentUpon>NewUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PCJ_SYSTEM_DBDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PCJ_SYSTEM_DBDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PCJ_SYSTEM_DBDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PCJ_SYSTEM_DBDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PCJ_SYSTEM_DBDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PCJ_SYSTEM_DBDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PCJ_SYSTEM_DBDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PCJ_SYSTEM_DBDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PCJ_SYSTEM_DBDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PCJ_SYSTEM_DBDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PCJ_SYSTEM_DBDataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PCJ_SYSTEM_DBDataSet5.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="GrideViewStatus\Outstandingstocks.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GrideViewStatus\Outstandingstocks.Designer.cs">
+      <DependentUpon>Outstandingstocks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GrideViewStatus\Status_of_Stocks.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GrideViewStatus\Status_of_Stocks.Designer.cs">
+      <DependentUpon>Status_of_Stocks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GrideViewStockContoller\SCStocks_Gems.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GrideViewStockContoller\SCStocks_Gems.Designer.cs">
+      <DependentUpon>SCStocks_Gems.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GrideViewAdmin\Stocks_Gems.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GrideViewAdmin\Stocks_Gems.Designer.cs">
+      <DependentUpon>Stocks_Gems.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GrideViewStockContoller\SCStocks_Jewelry.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GrideViewStockContoller\SCStocks_Jewelry.Designer.cs">
+      <DependentUpon>SCStocks_Jewelry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GrideViewAdmin\Stocks_Jewelry.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GrideViewAdmin\Stocks_Jewelry.Designer.cs">
+      <DependentUpon>Stocks_Jewelry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI Design\S_Gems.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI Design\S_Gems.Designer.cs">
+      <DependentUpon>S_Gems.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI Design\S_Jewelry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI Design\S_Jewelry.Designer.cs">
+      <DependentUpon>S_Jewelry.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="UI Design\Admin_Menu.resx">
+      <DependentUpon>Admin_Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DashBoard.resx">
+      <DependentUpon>DashBoard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Design\Foriegn_Currency_Update.resx">
+      <DependentUpon>Foriegn_Currency_Update.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GrideViewTransaction\Invoice_Certificate.resx">
+      <DependentUpon>Invoice_Certificate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Design\In_certi.resx">
+      <DependentUpon>In_certi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GrideViewAdmin\NewUser.resx">
+      <DependentUpon>NewUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="GrideViewStatus\Outstandingstocks.resx">
+      <DependentUpon>Outstandingstocks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GrideViewStatus\Status_of_Stocks.resx">
+      <DependentUpon>Status_of_Stocks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GrideViewStockContoller\SCStocks_Gems.resx">
+      <DependentUpon>SCStocks_Gems.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GrideViewAdmin\Stocks_Gems.resx">
+      <DependentUpon>Stocks_Gems.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GrideViewStockContoller\SCStocks_Jewelry.resx">
+      <DependentUpon>SCStocks_Jewelry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GrideViewAdmin\Stocks_Jewelry.resx">
+      <DependentUpon>Stocks_Jewelry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Design\S_Gems.resx">
+      <DependentUpon>S_Gems.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Design\S_Jewelry.resx">
+      <DependentUpon>S_Jewelry.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="PCJ_DBDataSet.xsc">
+      <DependentUpon>PCJ_DBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="PCJ_DBDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PCJ_DBDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PCJ_DBDataSet.xss">
+      <DependentUpon>PCJ_DBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="PCJ_SYSTEM_DBDataSet.xsc">
+      <DependentUpon>PCJ_SYSTEM_DBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="PCJ_SYSTEM_DBDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PCJ_SYSTEM_DBDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PCJ_SYSTEM_DBDataSet.xss">
+      <DependentUpon>PCJ_SYSTEM_DBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="PCJ_SYSTEM_DBDataSet1.xsc">
+      <DependentUpon>PCJ_SYSTEM_DBDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="PCJ_SYSTEM_DBDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PCJ_SYSTEM_DBDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PCJ_SYSTEM_DBDataSet1.xss">
+      <DependentUpon>PCJ_SYSTEM_DBDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="PCJ_SYSTEM_DBDataSet2.xsc">
+      <DependentUpon>PCJ_SYSTEM_DBDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="PCJ_SYSTEM_DBDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PCJ_SYSTEM_DBDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PCJ_SYSTEM_DBDataSet2.xss">
+      <DependentUpon>PCJ_SYSTEM_DBDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="PCJ_SYSTEM_DBDataSet3.xsc">
+      <DependentUpon>PCJ_SYSTEM_DBDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="PCJ_SYSTEM_DBDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PCJ_SYSTEM_DBDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PCJ_SYSTEM_DBDataSet3.xss">
+      <DependentUpon>PCJ_SYSTEM_DBDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="PCJ_SYSTEM_DBDataSet4.xsc">
+      <DependentUpon>PCJ_SYSTEM_DBDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="PCJ_SYSTEM_DBDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PCJ_SYSTEM_DBDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PCJ_SYSTEM_DBDataSet4.xss">
+      <DependentUpon>PCJ_SYSTEM_DBDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="PCJ_SYSTEM_DBDataSet5.xsc">
+      <DependentUpon>PCJ_SYSTEM_DBDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="PCJ_SYSTEM_DBDataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PCJ_SYSTEM_DBDataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PCJ_SYSTEM_DBDataSet5.xss">
+      <DependentUpon>PCJ_SYSTEM_DBDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
